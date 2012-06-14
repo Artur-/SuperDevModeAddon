@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE module PUBLIC "-//Google Inc.//DTD Google Web Toolkit 1.7.0//EN" "http://google-web-toolkit.googlecode.com/svn/tags/1.7.0/distro-source/core/src/gwt-module.dtd">
+<module>
+	<entry-point class="org.vaadin.artur.superdevmode.client.SuperDevModeApplicationConfiguration" />
+	
+	<inherits name="com.vaadin.terminal.gwt.DefaultWidgetSet" />
+
+
+<!-- 	<replace-with class="org.vaadin.artur.superdevmode.client.SuperDevModeApplicationConfiguration"> -->
+<!-- 		<when-type-is class="com.vaadin.terminal.gwt.client.ApplicationConfiguration"></when-type-is> -->
+<!-- 	</replace-with> -->
+	<replace-with class="org.vaadin.artur.superdevmode.client.SuperDevModeDebugConsole">
+		<when-type-is class="com.vaadin.terminal.gwt.client.Console"></when-type-is>
+	</replace-with>
+
+	<set-configuration-property name="devModeRedirectEnabled" value="true" />
+	<add-linker name="xsiframe" />
+
+</module>
